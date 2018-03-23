@@ -1,11 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DomoMeteoXamarin"
              x:Class="DomoMeteoXamarin.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <!--<StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="White">
 
-</ContentPage>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Hola" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Location:" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+            <Label Text="Canovelles" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Start:" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+            <Label Text="10" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="End:" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100"/>
+            <Label Text="11" />
+        </StackLayout>
+
+    </StackLayout>-->
+
+    <!--<StackLayout>
+
+        <Entry Text="{Binding MyMessage, Mode=TwoWay}" 
+              VerticalOptions="Center" 
+              HorizontalOptions="Center" />
+
+        <Label Text="{Binding MyMessage}" 
+              VerticalOptions="Center" 
+              HorizontalOptions="Center" />
+
+    </StackLayout>-->
+
+</TabbedPage>

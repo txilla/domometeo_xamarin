@@ -13,8 +13,8 @@ namespace DomoMeteoXamarin
 		{
 			InitializeComponent();
 
-			MainPage = new DomoMeteoXamarin.MainPage();
-		}
+            MainPage = new NavigationPage(new MainPage());
+        }
 
 		protected override void OnStart ()
 		{
