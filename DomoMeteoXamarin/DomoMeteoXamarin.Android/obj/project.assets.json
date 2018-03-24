@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v7.1": {
+    "MonoAndroid,Version=v8.1": {
       "Xamarin.Android.Support.Animated.Vector.Drawable/25.4.0.2": {
         "type": "package",
         "dependencies": {
@@ -696,7 +696,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "MonoAndroid,Version=v7.1": [
+    "MonoAndroid,Version=v8.1": [
       "DomoMeteoXamarin >= 1.0.0",
       "Xamarin.Android.Support.Design >= 25.4.0.2",
       "Xamarin.Android.Support.v4 >= 25.4.0.2",
@@ -707,46 +707,46 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aescalera\\.nuget\\packages\\": {},
+    "C:\\Users\\tXillA\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\DomoMeteoXamarin.Android.csproj",
+      "projectUniqueName": "C:\\Users\\tXillA\\Documents\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\DomoMeteoXamarin.Android.csproj",
       "projectName": "DomoMeteoXamarin.Android",
-      "projectPath": "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\DomoMeteoXamarin.Android.csproj",
-      "packagesPath": "C:\\Users\\aescalera\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\obj\\",
+      "projectPath": "C:\\Users\\tXillA\\Documents\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\DomoMeteoXamarin.Android.csproj",
+      "packagesPath": "C:\\Users\\tXillA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tXillA\\Documents\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\aescalera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tXillA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
-        "monoandroid71"
+        "monoandroid81"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid71": {
+        "monoandroid81": {
           "projectReferences": {
-            "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.csproj": {
-              "projectPath": "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.csproj"
+            "C:\\Users\\tXillA\\Documents\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.csproj": {
+              "projectPath": "C:\\Users\\tXillA\\Documents\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.csproj"
             }
           }
         }
       }
     },
     "frameworks": {
-      "monoandroid71": {
+      "monoandroid81": {
         "dependencies": {
           "Xamarin.Android.Support.Design": {
             "target": "Package",
