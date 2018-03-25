@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:DomoMeteoXamarin"
              x:Class="DomoMeteoXamarin.MainPage">
 
+
     <!--<StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="White">
 
         <StackLayout Orientation="Horizontal">

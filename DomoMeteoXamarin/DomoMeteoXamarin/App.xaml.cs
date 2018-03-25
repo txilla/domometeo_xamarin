@@ -14,6 +14,7 @@ namespace DomoMeteoXamarin
 			InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+            MainPage.Title = "Custom Title";
         }
 
 		protected override void OnStart ()

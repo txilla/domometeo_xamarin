@@ -7,7 +7,7 @@ namespace DomoMeteoXamarin.ViewModels
 {
     class MainViewModel
     {
-        private string _myMessage;
+        
 
         public MainViewModel()
         {

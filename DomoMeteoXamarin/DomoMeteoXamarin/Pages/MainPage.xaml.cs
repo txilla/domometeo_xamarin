@@ -18,6 +18,7 @@ namespace DomoMeteoXamarin
 
             Children.Add(new DashboardPage());
             Children.Add(new ConfigurationPage());
+
         }
 	}
 }

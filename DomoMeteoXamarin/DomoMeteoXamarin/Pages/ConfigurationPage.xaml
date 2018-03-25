@@ -1,12 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DomoMeteoXamarin.Pages.ConfigurationPage">
+             x:Class="DomoMeteoXamarin.Pages.ConfigurationPage"
+             Title="Configuration">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Configuration"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="30">
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Image Source="icon.png" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100"></Image>
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding Address, Mode=TwoWay}" Placeholder="Server Adress" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Entry Text="{Binding Port, Mode=TwoWay}" Placeholder="Port" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <Label Text="{Binding Address}" 
+              VerticalOptions="Center" 
+              HorizontalOptions="Center" />
+            </StackLayout>
+            <StackLayout VerticalOptions="End" Margin="0,0,50,0">
+                <Button Text="Save" Command="{Binding ClickCommand}" HorizontalOptions="End"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
