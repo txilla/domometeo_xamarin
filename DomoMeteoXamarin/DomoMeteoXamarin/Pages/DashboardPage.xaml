@@ -4,20 +4,22 @@
              x:Class="DomoMeteoXamarin.Pages.DashboardPage"
              Title="Dashboard">
     <ContentPage.Content>
-        <ListView x:Name="EmployeeView" ItemsSource="{Binding ListDataSensors}" >
+        <ListView x:Name="EmployeeView" ItemsSource="{Binding ListDataSensors}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <ViewCell Height="40">
                         <StackLayout
-                            Margin="10"
+                            Margin="20,0,20,0"
                             VerticalOptions="Center"
 						    Orientation="Vertical">
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Name}"
-								TextColor="Blue" />
-                                <Label Text="{Binding Data}"
-								HorizontalOptions="EndAndExpand"
-								TextColor="Blue" />
+                                <Label  Text="{Binding Name}"
+                                        FontSize="Medium"
+								        TextColor="#000000" />
+                                <Label  Text="{Binding Data}"
+								        FontSize="Medium"
+                                        HorizontalOptions="EndAndExpand"
+								        TextColor="#000000" />
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

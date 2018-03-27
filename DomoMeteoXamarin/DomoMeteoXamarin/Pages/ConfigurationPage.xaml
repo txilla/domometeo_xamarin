@@ -19,7 +19,8 @@
               HorizontalOptions="Center" />
             </StackLayout>
             <StackLayout VerticalOptions="End" Margin="0,0,50,0">
-                <Button Text="Save" Command="{Binding ClickCommand}" IsEnabled="{Binding IsEnabled}" HorizontalOptions="End"/>
+                <Button Text="Save" Command="{Binding ClickCommand}" IsEnabled="{Binding IsEnabled}" HorizontalOptions="End"
+                        BorderRadius = "10"/> 
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
