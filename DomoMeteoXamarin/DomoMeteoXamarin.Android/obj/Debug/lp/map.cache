@@ -24,3 +24,17 @@ Xamarin.Forms.Xaml
 netstandard
 System.ComponentModel
 System.Reflection.Extensions
+AutoMapper
+Newtonsoft.Json
+System.Resources.ResourceManager
+System.Diagnostics.Debug
+System.Collections
+System.Collections.Concurrent
+System.Diagnostics.Tools
+System.Globalization
+System.Dynamic.Runtime
+System.ObjectModel
+System.Threading.Tasks
+System.Threading
+System.Linq.Queryable
+System.Reflection.Primitives
