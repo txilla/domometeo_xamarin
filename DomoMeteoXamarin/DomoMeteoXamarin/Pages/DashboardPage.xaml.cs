@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomoMeteoXamarin.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace DomoMeteoXamarin.Pages
 		public DashboardPage ()
 		{
 			InitializeComponent ();
-		}
+            BindingContext = new DashboardViewModel();
+        }
 	}
 }

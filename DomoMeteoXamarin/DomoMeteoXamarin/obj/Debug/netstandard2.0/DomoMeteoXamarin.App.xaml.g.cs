@@ -11,8 +11,7 @@
 namespace DomoMeteoXamarin {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\tXillA\\Documents\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamar" +
-        "in\\App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin\\App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

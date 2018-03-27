@@ -5,6 +5,7 @@
              Title="Configuration">
     <ContentPage.Content>
         <StackLayout Margin="30">
+            <ActivityIndicator Color="Blue" IsRunning="{Binding IsBusy}" />
             <StackLayout VerticalOptions="StartAndExpand">
                 <Image Source="icon.png" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100"></Image>
                 <StackLayout Orientation="Horizontal">
@@ -18,7 +19,7 @@
               HorizontalOptions="Center" />
             </StackLayout>
             <StackLayout VerticalOptions="End" Margin="0,0,50,0">
-                <Button Text="Save" Command="{Binding ClickCommand}" HorizontalOptions="End"/>
+                <Button Text="Save" Command="{Binding ClickCommand}" IsEnabled="{Binding IsEnabled}" HorizontalOptions="End"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
