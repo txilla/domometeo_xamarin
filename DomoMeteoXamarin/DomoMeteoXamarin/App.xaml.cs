@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomoMeteoXamarin.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace DomoMeteoXamarin
 		public App ()
 		{
 			InitializeComponent();
+            AutoMapperConfig.Configure();
 
             MainPage = new NavigationPage(new MainPage
             {
