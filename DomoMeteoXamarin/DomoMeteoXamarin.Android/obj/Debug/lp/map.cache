@@ -1,5 +1,7 @@
+AutoMapper
 DomoMeteoXamarin
 FormsViewGroup
+Newtonsoft.Json
 System.Runtime
 Xamarin.Android.Support.Animated.Vector.Drawable
 Xamarin.Android.Support.Annotations
@@ -23,9 +25,6 @@ Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 netstandard
 System.ComponentModel
-System.Reflection.Extensions
-AutoMapper
-Newtonsoft.Json
 System.Resources.ResourceManager
 System.Diagnostics.Debug
 System.Collections
@@ -36,5 +35,6 @@ System.Dynamic.Runtime
 System.ObjectModel
 System.Threading.Tasks
 System.Threading
+System.Reflection.Extensions
 System.Linq.Queryable
 System.Reflection.Primitives
