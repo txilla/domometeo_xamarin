@@ -98,6 +98,7 @@ namespace DomoMeteoXamarin.ViewModels
             _sensors.Add(sensor2);
 
 
+
             //if ((Xamarin.Forms.Application.Current.Properties).Count > 0)
             //{
             //    var address = Xamarin.Forms.Application.Current.Properties["address"].ToString();
