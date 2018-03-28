@@ -4,7 +4,7 @@
              x:Class="DomoMeteoXamarin.Pages.DashboardPage"
              Title="Dashboard">
     <ContentPage.Content>
-        <ListView x:Name="EmployeeView" ItemsSource="{Binding ListDataSensors}">
+        <ListView x:Name="EmployeeView" ItemsSource="{Binding ListDataSensors, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell Height="40">

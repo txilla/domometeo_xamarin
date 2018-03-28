@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DomoMeteoXamarin.Models
 {
-    class Sensor
+    public class Sensor
     {
         public string Name { get; set; }
 

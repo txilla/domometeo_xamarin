@@ -1,9 +1,11 @@
 ﻿using DomoMeteoXamarin.Models;
+using DomoMeteoXamarin.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -65,24 +67,35 @@ namespace DomoMeteoXamarin.ViewModels
         //}
         //public ICommand ClickCommand { get; set; }
 
-        private readonly List<Sensor> _sensors;
+        private List<Sensor> _sensors;
 
         public List<Sensor> ListDataSensors
         {
             get { return _sensors; }
+            set
+            {
+                if (_sensors == value)
+                    return;
+
+                _sensors = value;
+                RaisePropertyChanged("ListDataSensors");
+            }
         }
 
         public DashboardViewModel()
         {
             _sensors = new List<Sensor>();
 
+
+
+
+            Task.Run(async () => await GetSensors());
+
             var sensor1 = new Sensor { Name = "Temp", Data = "20" };
             var sensor2 = new Sensor { Name = "Lux", Data = "10" };
 
             _sensors.Add(sensor1);
             _sensors.Add(sensor2);
-
-
 
 
             //if ((Xamarin.Forms.Application.Current.Properties).Count > 0)
@@ -102,6 +115,11 @@ namespace DomoMeteoXamarin.ViewModels
             //}
 
             //ClickCommand = new Command(OnClick);
+        }
+
+        private async Task GetSensors()
+        {
+            ListDataSensors = await DomoticzAPI.GetAllDevices();
         }
 
 
