@@ -4,10 +4,13 @@
              x:Class="DomoMeteoXamarin.Pages.DashboardPage"
              Title="Dashboard">
     <ContentPage.Content>
-        <ListView x:Name="EmployeeView" ItemsSource="{Binding ListDataSensors, Mode=TwoWay}">
+        <ListView x:Name="EmployeeView" ItemsSource="{Binding ListDataSensors, Mode=TwoWay}" SelectedItem="{Binding YourSelectedItem, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell Height="40">
+                    <ViewCell.ContextActions>
+                            <MenuItem Text="Share" Command="{Binding ShareCommand}" />
+                    </ViewCell.ContextActions>
                         <StackLayout
                             Margin="20,0,20,0"
                             VerticalOptions="Center"
