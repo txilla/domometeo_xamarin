@@ -20,7 +20,6 @@ namespace DomoMeteoXamarin
                     Title = "DomoMeteo"
                 }
             );
-
         }
 
         protected override void OnStart()

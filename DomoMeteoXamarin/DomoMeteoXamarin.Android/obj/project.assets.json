@@ -4433,24 +4433,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aescalera\\.nuget\\packages\\": {},
+    "C:\\Users\\tXillA\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\DomoMeteoXamarin.Android.csproj",
+      "projectUniqueName": "C:\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\DomoMeteoXamarin.Android.csproj",
       "projectName": "DomoMeteoXamarin.Android",
-      "projectPath": "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\DomoMeteoXamarin.Android.csproj",
-      "packagesPath": "C:\\Users\\aescalera\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\obj\\",
+      "projectPath": "C:\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\DomoMeteoXamarin.Android.csproj",
+      "packagesPath": "C:\\Users\\tXillA\\.nuget\\packages\\",
+      "outputPath": "C:\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\aescalera\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tXillA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -4464,8 +4464,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.csproj": {
-              "projectPath": "C:\\Git\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.csproj"
+            "C:\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.csproj": {
+              "projectPath": "C:\\GitHub\\DomoMeteoXamarin\\DomoMeteoXamarin\\DomoMeteoXamarin.csproj"
             }
           }
         }

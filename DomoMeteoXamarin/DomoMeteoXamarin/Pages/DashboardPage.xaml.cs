@@ -18,5 +18,10 @@ namespace DomoMeteoXamarin.Pages
 			InitializeComponent ();
             BindingContext = new DashboardViewModel();
         }
+
+        public void ClickShare()
+        {
+            App.Current.MainPage.DisplayAlert("Message", "share", "OK");
+        }
 	}
 }

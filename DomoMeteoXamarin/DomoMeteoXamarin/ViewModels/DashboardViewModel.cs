@@ -56,15 +56,18 @@ namespace DomoMeteoXamarin.ViewModels
         public DashboardViewModel()
         {
             _sensors = new List<Sensor>();
-            ShareCommand = new Command(OnShare);
+            ShareCommand = new Command<Sensor>(obj =>
+            {
+
+                OnShare(obj);
+            });
 
             Task.Run(async () => await GetSensors());
         }
 
-        public void OnShare()
+        public void OnShare(Sensor sensor)
         {
-            App.Current.MainPage.DisplayAlert("Message", "Saved", "OK");
-            CrossShare.Current.Share( new ShareMessage { Title = "hola", Text = "quiero compartir los datos de los sensores"});
+            CrossShare.Current.Share(new ShareMessage { Title = "hola", Text = string.Format("Sensor: {0} Valor: {1}", sensor.Name, sensor.Data) });
         }
 
         private async Task GetSensors()

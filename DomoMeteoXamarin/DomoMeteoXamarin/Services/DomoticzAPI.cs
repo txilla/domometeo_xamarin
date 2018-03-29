@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace DomoMeteoXamarin.Services
 {
+    //private 
+
     public class DomoticzAPI
     {
         // Get new data rows
