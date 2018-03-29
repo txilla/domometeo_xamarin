@@ -8,21 +8,21 @@ namespace DomoMeteoXamarin.ViewModels
 {
     class ChartViewModel : ViewModelBase
     {
-        string _address;
+        string _sensorName;
 
-        public string Address
+        public string SensorName
         {
-            get { return _address; }
+            get { return _sensorName; }
             set
             {
-                _address = value;
+                _sensorName = value;
                 RaisePropertyChanged("Address");
             }
         }
 
         public ChartViewModel(Sensor sensor)
         {
-            Address = sensor.Name;
+            SensorName = sensor.Name;
         }
 
         
