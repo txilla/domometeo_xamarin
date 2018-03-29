@@ -13,6 +13,7 @@ namespace DomoMeteoXamarin.Configure
 
         public static void Configure()
         {
+            AutoMapper.Mapper.Reset();
 
             AutoMapper.Mapper.Initialize(config => config.CreateMap<SensorDTO, Sensor>()
                .ForMember(g => g.Data, opt => opt.MapFrom(src => src.Data))
