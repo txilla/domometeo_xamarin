@@ -22,6 +22,7 @@
   </Jars>
   <ResolvedResourceDirectories>
     <ResolvedResourceDirectory>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\4\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\45\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\14\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\17\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\18\jl\res</ResolvedResourceDirectory>
@@ -32,11 +33,13 @@
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\lp\4\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\45\jl\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\lp\18\jl\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\4.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\45.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\14.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\17.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\GitHub\DomoMeteoXamarin\DomoMeteoXamarin.Android\obj\Debug\lp\18.stamp</ResolvedResourceDirectoryStamp>
