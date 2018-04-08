@@ -51,7 +51,33 @@ namespace DomoMeteoXamarin.ViewModels
             }
         }
 
+        private bool _isRefreshing = false;
+        public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set
+            {
+                _isRefreshing = value;
+                RaisePropertyChanged(nameof(IsRefreshing));
+            }
+        }
+
         public ICommand ShareCommand { get; set; }
+
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    IsRefreshing = true;
+
+                    await GetSensors();
+
+                    IsRefreshing = false;
+                });
+            }
+        }
 
         public DashboardViewModel()
         {

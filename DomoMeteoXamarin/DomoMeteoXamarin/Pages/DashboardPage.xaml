@@ -4,7 +4,12 @@
              x:Class="DomoMeteoXamarin.Pages.DashboardPage"
              Title="Dashboard">
     <ContentPage.Content>
-        <ListView  ItemsSource="{Binding ListDataSensors, Mode=TwoWay}" SelectedItem="{Binding YourSelectedItem, Mode=TwoWay}" x:Name="MyList" >
+        <ListView  ItemsSource="{Binding ListDataSensors, Mode=TwoWay}" 
+                   SelectedItem="{Binding YourSelectedItem, Mode=TwoWay}" 
+                   x:Name="MyList"
+                   IsPullToRefreshEnabled="True"
+                   RefreshCommand="{Binding RefreshCommand}"
+                   IsRefreshing="{Binding IsRefreshing}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell Height="40" x:Name="Item">

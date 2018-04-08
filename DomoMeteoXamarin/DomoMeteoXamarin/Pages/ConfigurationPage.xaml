@@ -14,9 +14,6 @@
                 <StackLayout Orientation="Horizontal">
                     <Entry Text="{Binding Port, Mode=TwoWay}" Placeholder="Port" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
-                <Label Text="{Binding Address}" 
-              VerticalOptions="Center" 
-              HorizontalOptions="Center" />
             </StackLayout>
             <StackLayout VerticalOptions="End" Margin="0,0,50,0">
                 <Button Text="Save" Command="{Binding ClickCommand}" IsEnabled="{Binding IsEnabled}" HorizontalOptions="End"

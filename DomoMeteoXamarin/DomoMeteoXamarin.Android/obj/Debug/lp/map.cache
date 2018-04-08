@@ -3,6 +3,8 @@ DomoMeteoXamarin
 FormsViewGroup
 Newtonsoft.Json
 Plugin.CurrentActivity
+Plugin.Settings.Abstractions
+Plugin.Settings
 Plugin.Share.Abstractions
 Plugin.Share
 System.Runtime
@@ -42,5 +44,3 @@ System.Threading
 System.Reflection.Extensions
 System.Linq.Queryable
 System.Reflection.Primitives
-Plugin.Settings.Abstractions
-Plugin.Settings

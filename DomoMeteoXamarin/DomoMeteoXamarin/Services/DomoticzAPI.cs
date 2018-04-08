@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DomoMeteoXamarin.Configure;
 using DomoMeteoXamarin.DTO;
 using DomoMeteoXamarin.Models;
 using Newtonsoft.Json;
@@ -19,14 +20,24 @@ namespace DomoMeteoXamarin.Services
         {
             var sensorsList = new List<Sensor>();
             HttpClient httpClient = new HttpClient();
-            HttpResponseMessage response = await httpClient.GetAsync("http://laislalost2.ddns.net:8080/json.htm?type=devices&filter=all&used=true&order=Name");
+            var address = Settings.Address;
+            var port = Settings.Port;
 
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (!String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(port))
             {
-                var json = await response.Content.ReadAsStringAsync();
-                var sensorsDTOList = JsonConvert.DeserializeObject<SensorsDTO>(json);
-                sensorsList = Mapper.Map<List<Sensor>>(sensorsDTOList.Items);
+                HttpResponseMessage response = await httpClient.GetAsync(String.Format("http://{0}:{1}/json.htm?type=devices&filter=all&used=true&order=Name", address, port));
+
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var sensorsDTOList = JsonConvert.DeserializeObject<SensorsDTO>(json);
+                    sensorsList = Mapper.Map<List<Sensor>>(sensorsDTOList.Items);
                 
+                }
+                else
+                {
+                    return sensorsList;
+                }
             }
 
             return sensorsList;

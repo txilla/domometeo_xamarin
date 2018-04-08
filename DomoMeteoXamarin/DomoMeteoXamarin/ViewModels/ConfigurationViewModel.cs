@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomoMeteoXamarin.Configure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -67,40 +68,24 @@ namespace DomoMeteoXamarin.ViewModels
 
         public ConfigurationViewModel()
         {
+            _adress = Settings.Address;
 
-            if ((Xamarin.Forms.Application.Current.Properties).Count > 0)
-            {
-                var address = Xamarin.Forms.Application.Current.Properties["address"].ToString();
-                if (!string.IsNullOrWhiteSpace(address))
-                {
-                    _adress = address;
-                }
-
-                var port = Xamarin.Forms.Application.Current.Properties["port"].ToString();
-                if (!string.IsNullOrWhiteSpace(address))
-                {
-                    _port = port;
-                }
-
-            }
+            _port = Settings.Port;
 
             ClickCommand = new Command(OnClick);
         }
 
 
-        public void OnClick ()
+        public void OnClick()
         {
             IsBusy = true;
             IsEnabled = false;
-            Xamarin.Forms.Application.Current.Properties.Remove("address");
-            Xamarin.Forms.Application.Current.Properties.Remove("port");
-            Xamarin.Forms.Application.Current.Properties.Add("address", Address);
-            Xamarin.Forms.Application.Current.Properties.Add("port", Port);
-            App.Current.SavePropertiesAsync();
+            Settings.Address = Address;
+            Settings.Port = Port;
             IsEnabled = true;
             IsBusy = false;
             App.Current.MainPage.DisplayAlert("Message", "Saved", "OK");
-            
+
 
         }
     }
