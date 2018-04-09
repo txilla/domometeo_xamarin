@@ -44,9 +44,13 @@ namespace DomoMeteoXamarin.ViewModels
             set
             {
                 _yourSelectedItem = value;
-                RaisePropertyChanged("YourSelectedItem");
+
+                if (_yourSelectedItem == null)
+                    return;
 
                 Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new ChartPage(_yourSelectedItem));
+
+                YourSelectedItem = null;
 
             }
         }

@@ -4,38 +4,40 @@
              x:Class="DomoMeteoXamarin.Pages.DashboardPage"
              Title="Dashboard">
     <ContentPage.Content>
-        <ListView  ItemsSource="{Binding ListDataSensors, Mode=TwoWay}" 
-                   SelectedItem="{Binding YourSelectedItem, Mode=TwoWay}" 
-                   x:Name="MyList"
-                   IsPullToRefreshEnabled="True"
-                   RefreshCommand="{Binding RefreshCommand}"
-                   IsRefreshing="{Binding IsRefreshing}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell Height="40" x:Name="Item">
-                    <ViewCell.ContextActions>
-                            <MenuItem Text="Share" 
-                                      BindingContext="{Binding Source={x:Reference MyList}, Path=BindingContext}" 
-                                      Command="{Binding ShareCommand}" 
-                                      CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
-                    </ViewCell.ContextActions>
-                        <StackLayout
-                            Margin="20,0,20,0"
-                            VerticalOptions="Center"
-						    Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label  Text="{Binding Name}"
-                                        FontSize="Medium"
-								        TextColor="#000000" />
-                                <Label  Text="{Binding Data}"
-								        FontSize="Medium"
-                                        HorizontalOptions="EndAndExpand"
-								        TextColor="#000000" />
+        <ScrollView>
+            <ListView  ItemsSource="{Binding ListDataSensors, Mode=TwoWay}" 
+                       SelectedItem="{Binding YourSelectedItem, Mode=TwoWay}" 
+                       x:Name="MyList"
+                       IsPullToRefreshEnabled="True"
+                       RefreshCommand="{Binding RefreshCommand}"
+                       IsRefreshing="{Binding IsRefreshing}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="40" x:Name="Item">
+                        <ViewCell.ContextActions>
+                                <MenuItem Text="Share" 
+                                          BindingContext="{Binding Source={x:Reference MyList}, Path=BindingContext}" 
+                                          Command="{Binding ShareCommand}" 
+                                          CommandParameter="{Binding Source={x:Reference Item}, Path=BindingContext}"/>
+                        </ViewCell.ContextActions>
+                            <StackLayout
+                                Margin="20,0,20,0"
+                                VerticalOptions="Center"
+						        Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label  Text="{Binding Name}"
+                                            FontSize="Medium"
+								            TextColor="#000000" />
+                                    <Label  Text="{Binding Data}"
+								            FontSize="Medium"
+                                            HorizontalOptions="EndAndExpand"
+								            TextColor="#000000" />
+                                </StackLayout>
                             </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
