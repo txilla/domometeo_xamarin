@@ -10,10 +10,11 @@
                        x:Name="MyList"
                        IsPullToRefreshEnabled="True"
                        RefreshCommand="{Binding RefreshCommand}"
-                       IsRefreshing="{Binding IsRefreshing}">
+                       IsRefreshing="{Binding IsRefreshing}"
+                       HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell Height="40" x:Name="Item">
+                        <ViewCell Height="80" x:Name="Item">
                         <ViewCell.ContextActions>
                                 <MenuItem Text="Share" 
                                           BindingContext="{Binding Source={x:Reference MyList}, Path=BindingContext}" 
@@ -24,14 +25,23 @@
                                 Margin="20,0,20,0"
                                 VerticalOptions="Center"
 						        Orientation="Vertical">
+                                    
                                 <StackLayout Orientation="Horizontal">
                                     <Label  Text="{Binding Name}"
                                             FontSize="Medium"
 								            TextColor="#000000" />
+                                    
                                     <Label  Text="{Binding Data}"
 								            FontSize="Medium"
                                             HorizontalOptions="EndAndExpand"
 								            TextColor="#000000" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label  Text="Last Update"
+                                            FontSize="Small" />
+                                    <Label  Text="{Binding LastUpdate}"
+                                            FontSize="Small"
+                                            HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

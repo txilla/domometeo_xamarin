@@ -18,5 +18,11 @@ namespace DomoMeteoXamarin.DTO
 
         [JsonProperty("Data")]
         public string Data { get; set; }
+
+        [JsonProperty("LastUpdate")]
+        public string LastUpdate { get; set; }
+
+        [JsonProperty("idx")]
+        public string Id { get; set; }
     }
 }
