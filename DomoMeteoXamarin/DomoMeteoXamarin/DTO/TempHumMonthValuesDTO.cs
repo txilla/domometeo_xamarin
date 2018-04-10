@@ -8,7 +8,7 @@ namespace DomoMeteoXamarin.DTO
     public class TempHumMonthValuesDTO
     {
         [JsonProperty("result")]
-        public List<SensorDTO> Items { get; set; }
+        public List<TempHumMonthValueDTO> Items { get; set; }
     }
 
     public class TempHumMonthValueDTO

@@ -48,29 +48,29 @@ namespace DomoMeteoXamarin.Services
 
         }
 
-        public static async Task<List<Entry>> GetTempHumMonth()
+        public static async Task<List<ChartValue>> GetTempHumMonth(string id)
         {
-            var valuesList = new List<Entry>();
-            //HttpClient httpClient = new HttpClient();
-            //var address = Settings.Address;
-            //var port = Settings.Port;
+            var valuesList = new List<ChartValue>();
+            HttpClient httpClient = new HttpClient();
+            var address = Settings.Address;
+            var port = Settings.Port;
 
-            //if (!String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(port))
-            //{
-            //    HttpResponseMessage response = await httpClient.GetAsync("http://http://laislalost2.ddns.net:8080/json.htm?type=graph&sensor=temp&idx=22&range=month");
+            if (!String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(port))
+            {
+                HttpResponseMessage response = await httpClient.GetAsync(String.Format("http://{0}:{1}/json.htm?type=graph&sensor=temp&idx={2}&range=month", address, port, id));
 
-            //    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-            //    {
-            //        var json = await response.Content.ReadAsStringAsync();
-            //        var valuesDTOList = JsonConvert.DeserializeObject<TempHumMonthValuesDTO>(json);
-            //        valuesList = Mapper.Map<List<Entry>>(valuesDTOList.Items);
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var valuesDTOList = JsonConvert.DeserializeObject<TempHumMonthValuesDTO>(json);
+                    valuesList = Mapper.Map<List<ChartValue>>(valuesDTOList.Items);
 
-            //    }
-            //    else
-            //    {
-            //        return valuesList;
-            //    }
-            //}
+                }
+                else
+                {
+                    return valuesList;
+                }
+            }
 
             return valuesList;
 

@@ -7,7 +7,7 @@
         <StackLayout>
             <Label Text="{Binding SensorName, Mode=TwoWay}"
                 HorizontalOptions="CenterAndExpand" />
-            <forms:ChartView x:Name="chartView" BackgroundColor="Transparent" Chart="{Binding LastRidesChart}" VerticalOptions="FillAndExpand"/>
+            <forms:ChartView x:Name="chartView" EnableTouchEvents="True"  BackgroundColor="Transparent" Chart="{Binding LastRidesChart, Mode=TwoWay}" VerticalOptions="FillAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

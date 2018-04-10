@@ -22,10 +22,10 @@ namespace DomoMeteoXamarin.Configure
                    .ForMember(g => g.Data, opt => opt.MapFrom(src => src.Data))
                    .ForMember(g => g.Name, opt => opt.MapFrom(src => src.Name));
 
-                config.CreateMap<TempHumMonthValueDTO, Entry>()
+                config.CreateMap<TempHumMonthValueDTO, ChartValue>()
                .ForMember(g => g.Label, opt => opt.MapFrom(src => src.Date))
                .ForMember(g => g.ValueLabel, opt => opt.MapFrom(src => src.Temperature))
-               .ForMember(g => g.Value, opt => opt.MapFrom(src => float.Parse(src.Temperature)));
+               .ForMember(g => g.Value, opt => opt.MapFrom(src => float.Parse(src.Temperature.Replace(".",","))));
         });
 
             //AutoMapper.Mapper.Initialize(config => config.CreateMap<SensorsDTO, Sensor>()
