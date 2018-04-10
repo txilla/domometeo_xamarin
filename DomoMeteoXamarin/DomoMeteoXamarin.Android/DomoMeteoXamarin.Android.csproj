@@ -54,10 +54,10 @@
       <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="Microcharts">
-      <Version>0.7.1</Version>
+      <Version>0.8.3-pre</Version>
     </PackageReference>
     <PackageReference Include="Microcharts.Forms">
-      <Version>0.7.1</Version>
+      <Version>0.8.3-pre</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>

@@ -119,8 +119,7 @@ namespace DomoMeteoXamarin.ViewModels
                 MinValue = entries.Min(e => e.Value),
                 Margin = 10,
                 PointMode = PointMode.Circle,
-                PointSize = 20,
-                LabelTextSize = 5
+                PointSize = 20
             };
         }
 

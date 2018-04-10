@@ -24,31 +24,32 @@
           "lib/netstandard1.3/AutoMapper.dll": {}
         }
       },
-      "Microcharts/0.7.1": {
+      "Microcharts/0.8.3-pre": {
         "type": "package",
         "dependencies": {
           "SkiaSharp": "1.59.1",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microcharts.dll": {}
+          "lib/netstandard1.3/Microcharts.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.dll": {}
+          "lib/netstandard1.3/Microcharts.dll": {}
         }
       },
-      "Microcharts.Forms/0.7.1": {
+      "Microcharts.Forms/0.8.3-pre": {
         "type": "package",
         "dependencies": {
+          "Microcharts": "0.8.3-pre",
           "SkiaSharp.Views.Forms": "1.59.1.1",
           "System.ValueTuple": "4.4.0",
-          "Xamarin.Forms": "2.4.0.280"
+          "Xamarin.Forms": "2.4.0.282"
         },
         "compile": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/netstandard1.3/Microcharts.Forms.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/netstandard1.3/Microcharts.Forms.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -741,31 +742,33 @@
         "lib/netstandard1.3/AutoMapper.xml"
       ]
     },
-    "Microcharts/0.7.1": {
-      "sha512": "Py79bYXqvsqthZtk1ChdDhy/n4mb7T2CKjzTVU7ldj4dnjgFC2nbOJMGeAJkDk1lZPoQPSPx3obSq7S29Zrt8g==",
+    "Microcharts/0.8.3-pre": {
+      "sha512": "8RF/nktCobZ2PBQ9t9BROI/v78azWePKzLv/X3W4h6UrsNLUjrusc/fA5sgh10lD4n6R7jP+LaDXx1p/sKd89w==",
       "type": "package",
-      "path": "microcharts/0.7.1",
+      "path": "microcharts/0.8.3-pre",
       "files": [
         "lib/MonoAndroid10/Microcharts.Droid.dll",
         "lib/MonoAndroid10/Microcharts.dll",
         "lib/Xamarin.iOS10/Microcharts.dll",
         "lib/Xamarin.iOS10/Microcharts.iOS.dll",
-        "lib/netstandard1.4/Microcharts.dll",
+        "lib/netstandard1.3/Microcharts.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Microcharts.dll",
         "lib/uap/Microcharts.Uwp.dll",
         "lib/uap/Microcharts.dll",
         "lib/xamarinmac/Microcharts.dll",
         "lib/xamarinmac/Microcharts.macOS.dll",
-        "microcharts.0.7.1.nupkg.sha512",
+        "microcharts.0.8.3-pre.nupkg.sha512",
         "microcharts.nuspec"
       ]
     },
-    "Microcharts.Forms/0.7.1": {
-      "sha512": "/oeY4j/x3I8PY6sNV3B6CHKdvZl3cJHxfkxIKSPaX86bc50mq1C0L+LqVnbRMwMa1PpywPtwL1+aqlKGM8bL3w==",
+    "Microcharts.Forms/0.8.3-pre": {
+      "sha512": "sw7TRWZbrodd+R26lpSm5o4ckoYPlj6rxiedXVeWyLJemKevOflWfX8W3HWjoadFDAhuOczEilHJOS5eXFeapQ==",
       "type": "package",
-      "path": "microcharts.forms/0.7.1",
+      "path": "microcharts.forms/0.8.3-pre",
       "files": [
-        "lib/netstandard1.4/Microcharts.Forms.dll",
-        "microcharts.forms.0.7.1.nupkg.sha512",
+        "lib/netstandard1.3/Microcharts.Forms.dll",
+        "lib/portable-net45+win8+wpa81+wp8/Microcharts.Forms.dll",
+        "microcharts.forms.0.8.3-pre.nupkg.sha512",
         "microcharts.forms.nuspec"
       ]
     },
@@ -3494,8 +3497,8 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "AutoMapper >= 6.2.2",
-      "Microcharts >= 0.7.1",
-      "Microcharts.Forms >= 0.7.1",
+      "Microcharts >= 0.8.3-pre",
+      "Microcharts.Forms >= 0.8.3-pre",
       "NETStandard.Library >= 2.0.1",
       "Newtonsoft.Json >= 11.0.2",
       "Plugin.Share >= 7.1.1",
@@ -3553,11 +3556,11 @@
           },
           "Microcharts": {
             "target": "Package",
-            "version": "[0.7.1, )"
+            "version": "[0.8.3-pre, )"
           },
           "Microcharts.Forms": {
             "target": "Package",
-            "version": "[0.7.1, )"
+            "version": "[0.8.3-pre, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",
