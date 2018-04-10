@@ -104,7 +104,7 @@ namespace DomoMeteoXamarin.ViewModels
                 var chartEntrie = new Entry(entrie.Value)
                 {
                     Color = SKColor.Parse("#3366ff"),
-                    Label = entrie.Label,
+                    Label = (entrie.Label).Substring(8, 2),
                     ValueLabel = entrie.ValueLabel
                 };
 
@@ -115,11 +115,15 @@ namespace DomoMeteoXamarin.ViewModels
 
             LastRidesChart = new LineChart()
             {
+                
                 Entries = entries,
+                //ValueLabelOrientation = Orientation.Vertical
                 MinValue = entries.Min(e => e.Value),
                 Margin = 10,
                 PointMode = PointMode.Circle,
-                PointSize = 20
+                PointSize = 20,
+                //LabelOrientation = Orientation.Horizontal
+
             };
         }
 
