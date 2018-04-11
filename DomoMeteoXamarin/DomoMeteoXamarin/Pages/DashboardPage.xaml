@@ -2,7 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DomoMeteoXamarin.Pages.DashboardPage"
+             xmlns:converters="clr-namespace:DomoMeteoXamarin.Converters"
              Title="Dashboard">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:StringToColorConverter x:Key="StringToColorConverter"></converters:StringToColorConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <ScrollView>
             <ListView  ItemsSource="{Binding ListDataSensors, Mode=TwoWay}" 
@@ -41,8 +49,10 @@
                                             FontSize="Small" />
                                     <Label  Text="{Binding LastUpdate}"
                                             FontSize="Small"
-                                            HorizontalOptions="EndAndExpand" />
+                                            HorizontalOptions="EndAndExpand" 
+                                            TextColor="{Binding MyTextColor, Converter={StaticResource StringToColorConverter}}"/>
                                 </StackLayout>
+                                
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

@@ -8,6 +8,10 @@
             <Label Text="{Binding SensorName, Mode=TwoWay}"
                 HorizontalOptions="CenterAndExpand" />
             <forms:ChartView x:Name="chartView" EnableTouchEvents="True" BackgroundColor="Transparent" Chart="{Binding LastRidesChart, Mode=TwoWay}" VerticalOptions="FillAndExpand" />
+            <StackLayout.GestureRecognizers>
+                <PinchGestureRecognizer PinchUpdated="OnPinchUpdated" />
+                <PanGestureRecognizer PanUpdated="OnPanUpdated" />
+            </StackLayout.GestureRecognizers>       
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

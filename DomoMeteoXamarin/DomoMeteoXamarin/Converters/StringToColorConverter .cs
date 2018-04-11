@@ -15,22 +15,23 @@ namespace DomoMeteoXamarin.Converters
             {
                 case (""):
                     {
-                        return Color.Default;
+                        return Color.Cyan;
                     }
                 case ("Accent"):
                     {
-                        return Color.Accent;
+                        return Color.Red;
                     }
                 default:
                     {
-                        return Color.FromHex(value.ToString());
+                        //return Color.FromHex(value.ToString());
+                        return Color.Green;
                     }
             }
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return null;
+            throw new NotImplementedException();
         }
     }
 }

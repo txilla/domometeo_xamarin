@@ -104,7 +104,8 @@ namespace DomoMeteoXamarin.ViewModels
                 var chartEntrie = new Entry(entrie.Value)
                 {
                     Color = SKColor.Parse("#3366ff"),
-                    Label = (entrie.Label).Substring(8, 2),
+                    //Label = (entrie.Label).Substring(8, 2),
+                    Label = entrie.Label,
                     ValueLabel = entrie.ValueLabel
                 };
 
@@ -119,7 +120,7 @@ namespace DomoMeteoXamarin.ViewModels
                 Entries = entries,
                 //ValueLabelOrientation = Orientation.Vertical
                 MinValue = entries.Min(e => e.Value),
-                Margin = 10,
+                Margin = 20,
                 PointMode = PointMode.Circle,
                 PointSize = 20,
                 //LabelOrientation = Orientation.Horizontal
