@@ -15,6 +15,9 @@ namespace DomoMeteoXamarin.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            App.ScreenWidth = (int)Resources.DisplayMetrics.WidthPixels; // real pixels
+            App.ScreenHeight = (int)Resources.DisplayMetrics.HeightPixels; // real pixels
+
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
             TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
 

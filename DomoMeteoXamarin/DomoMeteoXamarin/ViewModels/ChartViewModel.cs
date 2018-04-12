@@ -97,6 +97,9 @@ namespace DomoMeteoXamarin.ViewModels
             chartEntries = new List<ChartValue>();
             chartEntries = await DomoticzAPI.GetTempHumMonth(sensor.Id);
 
+            //var valuesDTOList = JsonConvert.DeserializeObject<TempHumMonthValuesDTO>(json);
+            //valuesList = Mapper.Map<List<ChartValue>>(valuesDTOList.Items);
+
             List<Entry> entries = new List<Entry>();
 
             foreach (ChartValue entrie in chartEntries)

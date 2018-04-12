@@ -14,8 +14,12 @@ namespace DomoMeteoXamarin.Services
 {
     //private 
 
-    public class DomoticzAPI
+    public class DomoticzAPI : IDomoticzAPI
     {
+        public DomoticzAPI()
+        {
+        }
+
         // Get new data rows
         public static async Task<List<Sensor>> GetAllDevices()
         {
@@ -78,6 +82,33 @@ namespace DomoMeteoXamarin.Services
             //http://laislalost2.ddns.net:8080/json.htm?type=graph&sensor=temp&idx=22&range=day temp
             //http://laislalost2.ddns.net:8080/json.htm?type=graph&sensor=counter&idx=20&range=month lux
 
+        }
+
+        public async Task<List<T>> GetAsync<T>(string url)
+        {
+            var valuesList = new List<T>();
+            HttpClient httpClient = new HttpClient();
+            var address = Settings.Address;
+            var port = Settings.Port;
+
+            if (!String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(port))
+            {
+                HttpResponseMessage response = await httpClient.GetAsync(url);
+
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var valuesDTOList = JsonConvert.DeserializeObject<TempHumMonthValuesDTO>(json);
+                    //valuesList = Mapper.Map<List<ChartValue>>(valuesDTOList.Items);
+
+                }
+                else
+                {
+                    return valuesList;
+                }
+            }
+
+            return valuesList;
         }
     }
 }
