@@ -50,7 +50,7 @@
                                     <Label  Text="{Binding LastUpdate}"
                                             FontSize="Small"
                                             HorizontalOptions="EndAndExpand" 
-                                            TextColor="{Binding MyTextColor, Converter={StaticResource StringToColorConverter}}"/>
+                                            TextColor="{Binding LastUpdate, Converter={StaticResource StringToColorConverter}}"/>
                                 </StackLayout>
                                 
                             </StackLayout>
