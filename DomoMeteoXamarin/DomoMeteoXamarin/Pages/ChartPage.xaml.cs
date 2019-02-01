@@ -39,6 +39,7 @@ namespace DomoMeteoXamarin.Pages
             }
             if (e.Status == GestureStatus.Running)
             {
+                /*
                 // Calculate the scale factor to be applied.
                 currentScale += (e.Scale - 1) * startScale;
                 currentScale = Math.Max(1, currentScale);
@@ -67,6 +68,7 @@ namespace DomoMeteoXamarin.Pages
 
                 // Apply scale factor
                 Content.Scale = currentScale;
+                */
             }
             if (e.Status == GestureStatus.Completed)
             {

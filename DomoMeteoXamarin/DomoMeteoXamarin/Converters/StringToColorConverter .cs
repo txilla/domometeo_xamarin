@@ -6,10 +6,11 @@ using Xamarin.Forms;
 
 namespace DomoMeteoXamarin.Converters
 {
-    class StringToColorConverter : IValueConverter
+    public class StringToColorConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
+            /*
             string valueAsString = value.ToString();
             switch (valueAsString)
             {
@@ -27,6 +28,9 @@ namespace DomoMeteoXamarin.Converters
                         return Color.Green;
                     }
             }
+            */
+
+            return Color.Red;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

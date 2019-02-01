@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DomoMeteoXamarin.Pages.DashboardPage"
              xmlns:converters="clr-namespace:DomoMeteoXamarin.Converters"
-             Title="Dashboard">
+             Title="Dashboard"
+             Icon="@drawable/ic_dashboard">
     
     <ContentPage.Resources>
         <ResourceDictionary>
-            <converters:StringToColorConverter x:Key="StringToColorConverter"></converters:StringToColorConverter>
+            <converters:StringToColorConverter x:Key="StringToColorMap" />
+            <!-- <converters:StringToColorConverter x:Key="StringToColorMap"></converters:StringToColorConverter> -->
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -47,10 +49,25 @@
                                 <StackLayout Orientation="Horizontal">
                                     <Label  Text="Last Update"
                                             FontSize="Small" />
+                                    
+                                    <!--
                                     <Label  Text="{Binding LastUpdate}"
                                             FontSize="Small"
                                             HorizontalOptions="EndAndExpand" 
-                                            TextColor="{Binding MyTextColor, Converter={StaticResource StringToColorConverter}}"/>
+                                            TextColor="Color.Red"/>
+                                    -->
+                                    <!--
+                                    <Label  Text="{Binding LastUpdate}"
+                                            FontSize="Small"
+                                            HorizontalOptions="EndAndExpand" 
+                                            TextColor="{Binding TextColor, Converter={StaticResource StringToColorMap}}" />
+                                    -->
+
+                                    <Label  Text="{Binding LastUpdate}"
+                                            FontSize="Small"
+                                            HorizontalOptions="EndAndExpand" 
+                                            TextColor="{Binding LastUpdate, Converter={StaticResource  StringToColorMap} }" />
+                                    
                                 </StackLayout>
                                 
                             </StackLayout>
