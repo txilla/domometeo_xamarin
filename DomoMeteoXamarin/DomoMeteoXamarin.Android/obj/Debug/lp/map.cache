@@ -50,3 +50,4 @@ System.Threading
 System.Reflection.Extensions
 System.Linq.Queryable
 System.Reflection.Primitives
+Autofac

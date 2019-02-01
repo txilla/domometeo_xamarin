@@ -12,7 +12,14 @@ namespace DomoMeteoXamarin.Converters
         {
             /*
             string valueAsString = value.ToString();
-            switch (valueAsString)
+
+            DateTime parsedDate = DateTime.Parse(valueAsString);
+
+            DateTime today = DateTime.Today;
+
+            var days = (today - parsedDate).TotalDays;
+
+            if(days > 2)
             {
                 case (""):
                     {
