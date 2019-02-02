@@ -10,7 +10,7 @@ namespace DomoMeteoXamarin.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            /*
+            
             string valueAsString = value.ToString();
 
             DateTime parsedDate = DateTime.Parse(valueAsString);
@@ -19,25 +19,12 @@ namespace DomoMeteoXamarin.Converters
 
             var days = (today - parsedDate).TotalDays;
 
-            if(days > 2)
+            if (days > 2)
             {
-                case (""):
-                    {
-                        return Color.Cyan;
-                    }
-                case ("Accent"):
-                    {
-                        return Color.Red;
-                    }
-                default:
-                    {
-                        //return Color.FromHex(value.ToString());
-                        return Color.Green;
-                    }
+                return Color.Red;
             }
-            */
 
-            return Color.Red;
+            return Color.Green;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

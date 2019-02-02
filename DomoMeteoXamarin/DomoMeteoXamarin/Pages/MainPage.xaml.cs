@@ -10,7 +10,7 @@ namespace DomoMeteoXamarin
         {
             //InitializeComponent();
             //BindingContext = new MainViewModel();
-            //On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
             Children.Add(new DashboardPage() { Icon = "ic_dashboard.png" });
             Children.Add(new ConfigurationPage() { Icon = "ic_build.png" });
